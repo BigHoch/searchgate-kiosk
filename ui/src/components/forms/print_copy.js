@@ -97,9 +97,9 @@ export default function PrintModal(props) {
             <Typography>
               <b>Vehicle Plate:</b> {vehicle.plate}
             </Typography>
-            {/* <Typography>
-              <b>Delivery Location:</b> {vehicle.delivery_location}
-            </Typography> */}
+            <Typography>
+              <b>Vehicle Code/Color:</b>
+              </Typography>
           </Box>
           {<Box sx={{ mt: 6 }}>
           <Typography sx={{ textAlign: "left", mt: 1 }}>
@@ -129,18 +129,28 @@ export default function PrintModal(props) {
               <Typography sx={{ textAlign: "left", mt: 1 }}>
              Trip 4:
             </Typography>
-          <hr style={{ 
-    border: 'none', 
-    borderTop: '2px solid black', 
-    margin: '0px 0px' 
-  }} />
+            <hr
+  style={{
+    border: "none",
+    borderTop: "2px solid black",
+    margin: "0", // Remove all margin (default margin adds white space)
+    padding: "0", // Remove padding to avoid extra space
+  }}
+/>
                 <Typography sx={{ textAlign: "left", mt: 1 }}>
              SF Member Signature/Time
+             <hr
+    style={{
+      border: "none",
+      margin: "0", 
+      padding: "0",
+    }}
+  />
             </Typography>
           </Box> }
           <Typography
             sx={{
-              mt: 25,
+              mt: 2,
               display: "flex",
               width: "100%",
               justifyContent: "center",
@@ -148,6 +158,7 @@ export default function PrintModal(props) {
               fontWeight: 'bold',
               fontSize: '1.5rem',
             }}
+            
           >
             Ensure Pass Is Kept In Vehicle At All Times
           </Typography>
@@ -156,6 +167,7 @@ export default function PrintModal(props) {
               fontSize: '0.875rem', 
               color: 'text.secondary',  
               justifyContent: "center",
+              mb: 3,
             }}
           >
             For each additional trip on the installation, ensure Security Forces member receives this receipt.
